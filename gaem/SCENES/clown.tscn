@@ -61,10 +61,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7c3o"]
-size = Vector2(12, 16)
+size = Vector2(12, 21.333334)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbqex"]
-size = Vector2(14.666667, 19.333334)
+size = Vector2(15.333334, 23.333334)
 
 [node name="Clown" type="CharacterBody2D" unique_id=366808439 node_paths=PackedStringArray("hitbox")]
 scale = Vector2(1.5, 1.5)
@@ -77,11 +77,11 @@ autoplay = "default"
 frame_progress = 0.19063748
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=925994027]
-position = Vector2(0, 2)
+position = Vector2(0, -0.666667)
 shape = SubResource("RectangleShape2D_s7c3o")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1064145766]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1601290133]
-position = Vector2(2.3841858e-07, 1.666667)
+position = Vector2(-0.33333302, -0.33333302)
 shape = SubResource("RectangleShape2D_sbqex")

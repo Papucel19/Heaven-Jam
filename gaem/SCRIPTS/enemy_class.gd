@@ -245,7 +245,7 @@ func spawn_ground_shockwaves() -> void:
 		
 		wave.body_entered.connect(func(body):
 			if body is PLAYER and body.has_method("take_damage"):
-				body.take_damage(1)
+				body.take_damage(1.5)
 				wave.queue_free()
 		)
 		
