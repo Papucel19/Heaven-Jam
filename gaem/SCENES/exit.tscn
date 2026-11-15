@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://8soq6eabbvg3"]
+
+[ext_resource type="FontFile" uid="uid://bpkuex0y8ew4s" path="res://ART/font/OldeTome.ttf" id="1_iv7e8"]
+[ext_resource type="Script" uid="uid://canwctre7p34f" path="res://SCRIPTS/exit.gd" id="1_uajdb"]
+
+[node name="Exit" type="Control" unique_id=1844538328]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_uajdb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1738291476]
+layout_mode = 0
+offset_left = -99.0
+offset_top = -68.0
+offset_right = 480.0
+offset_bottom = 298.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1188944981]
+layout_mode = 0
+offset_left = 25.0
+offset_top = -19.0
+offset_right = 303.0
+offset_bottom = 213.0
+theme_override_colors/default_color = Color(0.5845737, 0, 0.10112812, 1)
+theme_override_fonts/normal_font = ExtResource("1_iv7e8")
+theme_override_font_sizes/normal_font_size = 44
+text = "ThErE iS 
+nO 
+eXiT"
+horizontal_alignment = 1
+vertical_alignment = 1

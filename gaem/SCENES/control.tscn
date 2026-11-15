@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://cvvuecinsbiv8"]
+
+[ext_resource type="Script" uid="uid://dp31qcpkj4mq7" path="res://SCRIPTS/game_start.gd" id="1_f3g2n"]
+[ext_resource type="Texture2D" uid="uid://b5odha5s8hpwa" path="res://ART/castle_creepy_1080p_1.png" id="1_fylh0"]
+[ext_resource type="Texture2D" uid="uid://bycekfbapbqj4" path="res://ART/Buttons.png" id="1_x7mjp"]
+[ext_resource type="FontFile" uid="uid://bpkuex0y8ew4s" path="res://ART/font/OldeTome.ttf" id="3_5x4ps"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fylh0"]
+texture = ExtResource("1_x7mjp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_5wlvi"]
+sources/0 = SubResource("TileSetAtlasSource_fylh0")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5x4ps"]
+texture = ExtResource("1_x7mjp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_fhn03"]
+sources/0 = SubResource("TileSetAtlasSource_5x4ps")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3g2n"]
+texture = ExtResource("1_x7mjp")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7bk8n"]
+sources/0 = SubResource("TileSetAtlasSource_f3g2n")
+
+[node name="Control" type="Control" unique_id=1938961620]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_f3g2n")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1643884774]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -31.0
+offset_right = 1874.0
+offset_bottom = 1049.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.198, 0.206)
+texture = ExtResource("1_fylh0")
+
+[node name="TileMap2" type="TileMap" parent="." unique_id=688169486]
+position = Vector2(4, -6)
+tile_set = SubResource("TileSet_5wlvi")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 1, 1, 196608, 0, 65537, 196608, 1)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=969499772]
+position = Vector2(62.000004, -15)
+scale = Vector2(2.255, 2.255)
+tile_set = SubResource("TileSet_fhn03")
+format = 2
+layer_0/tile_data = PackedInt32Array(1, 0, 2, 65537, 0, 3, 2, 65536, 2, 65538, 65536, 3, 3, 131072, 2, 65539, 131072, 3, 4, 196608, 2, 65540, 196608, 3)
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="TileMap" unique_id=1967890100]
+offset_left = 19.955652
+offset_top = 10.199558
+offset_right = 81.5941
+offset_bottom = 23.62576
+scale = Vector2(0.935, 0.935)
+theme_override_constants/line_separation = -2
+theme_override_fonts/normal_font = ExtResource("3_5x4ps")
+theme_override_font_sizes/normal_font_size = 7
+theme_override_font_sizes/bold_font_size = 14
+text = "Ratata
+Bouncy edition"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="TileMap3" type="TileMap" parent="." unique_id=194626848]
+position = Vector2(-81, -153)
+scale = Vector2(1.545, 1.545)
+tile_set = SubResource("TileSet_7bk8n")
+format = 2
+layer_0/tile_data = PackedInt32Array(589832, 0, 4, 655368, 0, 5, 589833, 65536, 4, 655369, 65536, 5, 589834, 131072, 4, 655370, 131072, 5, 589835, 196608, 4, 655371, 196608, 5)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=741569632]
+position = Vector2(164, 94)
+
+[node name="Button_Exit" type="Button" parent="." unique_id=2075710739]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 35.0
+offset_bottom = 19.0
+theme_override_fonts/font = ExtResource("3_5x4ps")
+theme_override_font_sizes/font_size = 8
+text = "Exit"
+flat = true
+
+[node name="Button_Start" type="Button" parent="." unique_id=1791029737]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 85.0
+offset_right = 196.05492
+offset_bottom = 106.0
+scale = Vector2(0.94, 0.94)
+theme_override_fonts/font = ExtResource("3_5x4ps")
+theme_override_font_sizes/font_size = 12
+text = "Start"
+flat = true

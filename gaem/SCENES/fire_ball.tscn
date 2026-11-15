@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cfdemcoadciha"]
+
+[ext_resource type="Script" uid="uid://bv2nenswtemf0" path="res://SCRIPTS/fire_ball.gd" id="1_63vpm"]
+[ext_resource type="Texture2D" uid="uid://doiutrywei83a" path="res://ART/New Piskel.png" id="2_g2qqv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhn03"]
+radius = 7.407408
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rtx3"]
+atlas = ExtResource("2_g2qqv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36qmw"]
+atlas = ExtResource("2_g2qqv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3y02c"]
+atlas = ExtResource("2_g2qqv")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5wlvi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rtx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36qmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3y02c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=700279036 node_paths=PackedStringArray("hitbox")]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_63vpm")
+hitbox = NodePath(".")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1168386130]
+position = Vector2(2.9802322e-08, 4.4703484e-08)
+scale = Vector2(1.8, 1.8)
+shape = SubResource("CircleShape2D_fhn03")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1829533353]
+position = Vector2(0.66666675, 0.66666675)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_5wlvi")
+frame_progress = 0.13455005

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bs23oi646beak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6v6y"]
+
+[node name="Rat" type="CharacterBody2D" unique_id=611327026]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735143100]
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_g6v6y")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dflks7m1kl25o"]
+
+[ext_resource type="Script" uid="uid://drtwx6s6aa35w" path="res://SCRIPTS/sword.gd" id="1_5smkj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6535q"]
+size = Vector2(26.666664, 193.40659)
+
+[node name="Sword" type="Area2D" unique_id=1692556043]
+script = ExtResource("1_5smkj")
+metadata/_edit_horizontal_guides_ = [-37.0]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1500804966]
+offset_left = -4.0
+offset_top = -44.0
+offset_right = 4.0
+offset_bottom = 44.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1147431056]
+position = Vector2(1.4210855e-14, 1.1920929e-07)
+scale = Vector2(0.3, 0.455)
+shape = SubResource("RectangleShape2D_6535q")
+debug_color = Color(1, 0.019232832, 0.0017920041, 0.41960785)

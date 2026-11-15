@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://8h7eu7eikbiw"]
+
+[sub_resource type="GDScript" id="GDScript_d4tvq"]
+script/source = "extends Area2D
+
+var launch_pow = 500
+
+func _ready() -> void:
+	pass 
+
+func _process(delta: float) -> void:
+	pass
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is ENEMY:
+		if body.has_method(\"launch_up\"):
+			body.launch_up(launch_pow)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbqex"]
+size = Vector2(916.5, 177)
+
+[node name="Area2D" type="Area2D" unique_id=257424957]
+script = SubResource("GDScript_d4tvq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1434803055]
+offset_left = 105.0
+offset_top = 402.0
+offset_right = 1026.0
+offset_bottom = 575.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1629614331]
+position = Vector2(563, 488)
+shape = SubResource("RectangleShape2D_sbqex")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

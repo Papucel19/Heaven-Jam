@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://deq7kkgu5bm7l"]
+
+[ext_resource type="Script" uid="uid://btxohhdrtagca" path="res://SCRIPTS/shield.gd" id="1_351in"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gfmj2"]
+size = Vector2(10.5, 123)
+
+[node name="Shield" type="Node2D" unique_id=355799994]
+rotation = -3.1415927
+script = ExtResource("1_351in")
+
+[node name="ShieldHitbox" type="Area2D" parent="." unique_id=1508002268]
+position = Vector2(62, 0)
+collision_layer = 0
+collision_mask = 2
+metadata/_edit_horizontal_guides_ = [-33.0, 32.0]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShieldHitbox" unique_id=1311654886]
+shape = SubResource("RectangleShape2D_gfmj2")
+
+[node name="Sprite" type="ColorRect" parent="." unique_id=416424196]
+offset_left = 56.0
+offset_top = -62.0
+offset_right = 68.0
+offset_bottom = 62.0
+color = Color(0.8191865, 0.67997295, 0.007633152, 1)
+metadata/_edit_use_anchors_ = true
